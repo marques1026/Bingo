@@ -1,3 +1,4 @@
+/*
 let nome = prompt("Digite seu nome:");
 
 if (nome) {
@@ -65,3 +66,6 @@ btn.addEventListener("click", () => {
     sorteador();
     gerarTabela();
 });
+
+
+*/

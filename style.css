@@ -8,32 +8,38 @@
 
 
 h1.bem-vindo{
-    color: rgb(0, 0, 0);
-    padding: 0 50px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: 100%;
-    position: relative;
-    top: 50px; 
-}
-
-h2.titulo-bingo{
-    color: rgb(0, 0, 0);
-    padding: 0 50px;
-    font-family: "Playwrite CA", cursive;
-    height: 80px;
+    color: rgba(0, 0, 0, 0.774);
+    padding: 0 30px;
+    font-family: "DM Serif Display", serif;
+    font-weight: bold;
+    font-style: normal;   
     font-size: 50px;
     display: flex;
     align-items: center;
     justify-content: left;
     width: 100%;
     position: relative;
-    top: 150px; 
-
+    top: 35px; 
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(100, 200, 255, 0.6), 0 0 45px rgba(200, 100, 255, 0.4);
+    transition: box-shadow 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de hover */
 }
+
+
+h2.bingoGalerinha{
+    color: rgba(55, 5, 136, 0.705);
+    padding: 0 30px;
+   font-family: "Permanent Marker", cursive;
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    position: relative;
+    top: 60px; 
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(100, 200, 255, 0.6), 0 0 45px rgba(200, 100, 255, 0.4);
+    transition: box-shadow 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de hover */
+}
+
 
 
 html, body {
@@ -42,9 +48,10 @@ html, body {
 }
 
 body {
-  background: linear-gradient(-45deg, #ff00cc, #3333ff, #00ffcc, #ff9900);
+  background: linear-gradient(-45deg, #63e2f3, #b05ad8, #00ffcc, #9900ff);
   background-size: 400% 400%; /* deixa a área maior para a animação se mover */
   animation: gradientMove 15s ease infinite; /* chama a animação */
+  position: relative;
 }
 
 /* Animação do gradiente */
@@ -62,14 +69,11 @@ body {
 
 
 .container-tabela{
-    display: flex;
-    justify-content: right;
-    padding: 100px;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    padding-top: 0.0px;
-  
+    width: auto;
+    position: absolute; /* Posicionamento absoluto */
+    top: 50px;         /* Ajuste a distância do topo conforme necessário */
+    right: 50px;        /* Distância da borda direita */
+    padding-top: 0;
     
 }
 
@@ -87,12 +91,18 @@ body {
 }
 
 .tabela-bingo th {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
     color: #ffffff;
     padding: 2px 50px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #7a4ff0b2;
     font-size: 2.6rem;
-    border-radius: 2px;
+    border-radius: 450px;
     -webkit-text-stroke: 0.1px black;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(100, 200, 255, 0.6), 0 0 45px rgba(200, 100, 255, 0.4);
+    transition: box-shadow 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de hover */
 
 }
 
@@ -109,8 +119,50 @@ body {
 }
 
 .btnSortear{
-    color: #9440b0;
-    padding: 2px 50px;
-    font-size: 2.6rem;
-    border-radius: 2px;
+    color: #fff; /* Alterei a cor do texto para branco para melhor contraste */
+    padding: 15px 50px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;    font-size: 2rem;
+    border-radius: 10px;
+    border: none; /* Adicionado para remover a borda padrão */
+    background: linear-gradient(-45deg, #ff00cc, #3333ff, #00ffcc, #ff9900);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    cursor: pointer;
+    display: block; /* Faz o botão se comportar como um bloco */
+    margin-left: 30px; /* Centraliza horizontalmente */
+    margin-top: 100px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(100, 200, 255, 0.6), 0 0 45px rgba(200, 100, 255, 0.4);
+    transition: box-shadow 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+
+.btnSortear:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1),
+    0 0 40px rgba(100, 200, 255, 0.8),
+    0 0 60px rgba(200, 100, 255, 0.6);
+}
+
+
+
+.logo_bingo{
+    height: 400px;
+    vertical-align: middle;
+}
+
+h2.numSorteado{
+    color: rgb(90, 3, 83);
+    padding: 0 30px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    position: relative;
+    margin-top: 20px; 
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(100, 200, 255, 0.6), 0 0 45px rgba(200, 100, 255, 0.4);
+    transition: box-shadow 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito de hover */
 }
