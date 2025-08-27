@@ -1,171 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bingo da Mary</title>
-    
-    <!--Declaração do JavaScript-->
     <link rel="stylesheet" href="./style.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Serif+Display:ital@0;1&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Oleo+Script:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=Lilita+One&family=Oleo+Script:wght@400;700&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik+Distressed&family=Rubik:ital,wght@0,300..900;1,300..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libertinus+Keyboard&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1 class="bem-vindo"> Seja bem-Vindo(a) ao</h1>
-    <h2 class="bingoGalerinha"> Bingo da <br> Galerinha!!</h2>
+    <h1 class="bem-vindo"> Seja bem-Vindo(a) ao <br> BINGO DO POVO!</h1>
+    <button id="btnSortear" class="btnSortear">SORTEAR</button>
+    <section class="sessaoNumeros">
+        <h2 class="numSorteado"> Número sorteado:</h2>
+        <div id="numeroSorteadoDisplay" class="numeroSorteado">?</div>
+        <button id="resetarbtn" class="resetarbtn">Resetar jogo</button>
+    </section>
+    <article class="container-tabela">
+        <table class="tabela-bingo">
+            <thead>
+                <tr>
+                    <th>B</th>
+                    <th>I</th>
+                    <th>N</th>
+                    <th>G</th>
+                    <th>O</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>16</td>
+                    <td>31</td>
+                    <td>46</td>
+                    <td>61</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>17</td>
+                    <td>32</td>
+                    <td>47</td>
+                    <td>62</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>18</td>
+                    <td>33</td>
+                    <td>48</td>
+                    <td>63</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>19</td>
+                    <td>34</td>
+                    <td>49</td>
+                    <td>64</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>20</td>
+                    <td>35</td>
+                    <td>50</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>21</td>
+                    <td>36</td>
+                    <td>51</td>
+                    <td>66</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>22</td>
+                    <td>37</td>
+                    <td>52</td>
+                    <td>67</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>23</td>
+                    <td>38</td>
+                    <td>53</td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>24</td>
+                    <td>39</td>
+                    <td>54</td>
+                    <td>69</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>25</td>
+                    <td>40</td>
+                    <td>55</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>26</td>
+                    <td>41</td>
+                    <td>56</td>
+                    <td>71</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>27</td>
+                    <td>42</td>
+                    <td>57</td>
+                    <td>72</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>28</td>
+                    <td>43</td>
+                    <td>58</td>
+                    <td>73</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>29</td>
+                    <td>44</td>
+                    <td>59</td>
+                    <td>74</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>30</td>
+                    <td>45</td>
+                    <td>60</td>
+                    <td>75</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <div id="popup-container" class="popup-container">
+        <div class="popup">
+            <h2>Número Sorteado!</h2>
+            <p id="numeroPopup"></p>
+            <button id="btnFecharPopup">OK</button>
+        </div>
+    </div>
+    <section class="historico-container">
+        <h3>Histórico de Números</h3>
+        <div id="historico-numeros">
+        </div>
+    </section>
+    <div id="bingo-popup-container" class="popup-container">
+        <div class="popup">
+            <h2 id="bingo-letra">BINGO!</h2>
+            <p>Você completou a coluna!</p>
+            <button id="btnResetarJogo">Resetar Jogo</button>
+        </div>
+    </div>
+</body>
 
-
-    <button class="btnSortear">SORTEAR</button>
-      <h3 id="numeroSorteado" class="numeroSorteado"></h3>
-        <section class="sessaoNumeros">
-    <h2 class="numSorteado"> Número sorteado:</h2>
-        </section>
-
-
-
-<article class="container-tabela">
-
-    <table class="tabela-bingo">
-    <thead> <tr>
-            <th>B</th> 
-            <th>I</th>
-            <th>N</th>
-            <th>G</th>
-            <th>O</th>
-        </tr>
-    </thead>
-
-
-
-    <tr>
-        <td>1</td>
-        <td>16</td>
-        <td>31</td>
-        <td>46</td>
-        <td>61</td>
-    </tr>
-
-    <tr>
-        <td>2</td>
-        <td>17</td>
-        <td>32</td>
-        <td>47</td>
-        <td>62</td>
-    </tr>
-        <tr>
-        <td>3</td>
-        <td>18</td>
-        <td>33</td>
-        <td>48</td>
-        <td>63</td>
-
-    </tr>
-        <tr>
-        <td>4</td>
-        <td>19</td>
-        <td>34</td>
-        <td>49</td>
-        <td>64</td>
-
-    </tr>
-
-    <tr>
-        <td>5</td>
-        <td>20</td>
-        <td>35</td>
-        <td>50</td>
-        <td>65</td>
-    </tr>
-
-    <tr>
-        <td>6</td>
-        <td>21</td>
-        <td>36</td>
-        <td>51</td>
-        <td>66</td>
-    </tr>
-
-
-    <tr>
-        <td>7</td>
-        <td>22</td>
-        <td>37</td>
-        <td>52</td>
-        <td>67</td>
-    </tr>
-
-    <tr>
-        <td>8</td>
-        <td>23</td>
-        <td>38</td>
-        <td>53</td>
-        <td>68</td>
-    </tr>
-
-    <tr>
-        <td>9</td>
-        <td>24</td>
-        <td>39</td>
-        <td>54</td>
-        <td>69</td>
-    </tr>
-
-    <tr>
-        <td>10</td>
-        <td>25</td>
-        <td>40</td>
-        <td>55</td>
-        <td>70</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>26</td>
-        <td>41</td>
-        <td>56</td>
-        <td>71</td>
-    </tr>
-
-        <tr>
-        <td>12</td>
-        <td>27</td>
-        <td>42</td>
-        <td>57</td>
-        <td>72</td>
-    </tr>
-
-        <tr>
-        <td>13</td>
-        <td>28</td>
-        <td>43</td>
-        <td>58</td>
-        <td>73</td>
-    </tr>
-
-        <tr>
-        <td>14</td>
-        <td>29</td>
-        <td>44</td>
-        <td>59</td>
-        <td>74</td>
-    </tr>
-
-        <tr>
-        <td>15</td>
-        <td>30</td>
-        <td>45</td>
-        <td>60</td>
-        <td>75</td>
-    </tr>
-
-    
-    </table>
-</article>
-
-</body> 
-</html>
+</html
