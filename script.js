@@ -1,4 +1,4 @@
-// SELEÇÃO DE ELEMENTOS DO HTML 
+// ELEMENTOS DO HTML 
 const btnSortear = document.querySelector("#btnSortear");
 const numeroSorteadoDisplay = document.querySelector("#numeroSorteadoDisplay");
 const popupContainer = document.querySelector("#popup-container");
@@ -11,14 +11,13 @@ const btnResetarJogo = document.querySelector("#btnResetarJogo");
 const resetarbtn = document.querySelector("#resetarbtn");
 
 
-//  VARIÁVEIS DE ESTADO DO BiNGO-
+//variaveis
 let numerosSorteados = [];
 let contagemLetras = { 'B': 0, 'I': 0, 'N': 0, 'G': 0, 'O': 0 };
 
 
-// --- 3. FUNÇÕES AUXILIARES ---
 
-// Descobre a qual letra (B, I, N, G, O) um número pertence.
+//descobre qual letra o número pertence
 function getLetraDoNumero(numero) {
     if (numero <= 15) return 'B';
     if (numero <= 30) return 'I';
@@ -27,7 +26,7 @@ function getLetraDoNumero(numero) {
     return 'O';
 }
 
-// Cria e adiciona um novo número ao display de histórico na tela.
+// cria e adiciona um novo número no histórico da tela
 function atualizarHistorico(numero, letra) {
     const novoNumeroEl = document.createElement('div');
     novoNumeroEl.classList.add('numero-historico');
@@ -35,7 +34,7 @@ function atualizarHistorico(numero, letra) {
     historicoDiv.appendChild(novoNumeroEl);
 }
 
-// Pinta de roxo o número sorteado na tabela principal.
+//pinta de roxo o número sorteado na tabela
 function marcarNumeroNaTabela(numero) {
     const todasAsCelulas = document.querySelectorAll(".tabela-bingo tbody td");
     todasAsCelulas.forEach(celula => {
@@ -45,7 +44,7 @@ function marcarNumeroNaTabela(numero) {
     });
 }
 
-// Verifica se todos os 15 números de uma letra já foram sorteados.
+//verifica se todos os 15 números de uma letra já foram sorteados
 function checarBingo(letra) {
     if (contagemLetras[letra] === 15) {
         bingoLetraEl.textContent = `BINGO NA LETRA ${letra}!`;
@@ -53,7 +52,7 @@ function checarBingo(letra) {
     }
 }
 
-// Limpa todas as variáveis e elementos visuais para recomeçar o jogo.
+// limpa tudo e recomeça
 function resetarJogo() {
     numerosSorteados = [];
     contagemLetras = { 'B': 0, 'I': 0, 'N': 0, 'G': 0, 'O': 0 };
@@ -70,10 +69,7 @@ function resetarJogo() {
 }
 
 
-// --- 4. LÓGICA PRINCIPAL DO JOGO ---
-// Este é o coração do jogo. Ele "escuta" o clique no botão SORTEAR e, quando
-// acontece, executa toda a lógica: gera um número novo, atualiza a tela,
-// o histórico, a tabela, mostra o pop-up e verifica se houve bingo.
+// executa a logica do jogo
 btnSortear.addEventListener("click", () => {
     if (numerosSorteados.length >= 75) {
         alert("Todos os números já foram sorteados!");
@@ -100,9 +96,7 @@ btnSortear.addEventListener("click", () => {
 });
 
 
-// --- 5. OUVINTES DE EVENTOS (EVENT LISTENERS) ---
-// Este bloco final torna os outros botões funcionais. Ele espera por cliques
-// para fechar o pop-up do número ou para chamar a função de resetar o jogo.
+// fecha pop up e reseta o jogo
 btnFecharPopup.addEventListener("click", () => {
     popupContainer.classList.remove("mostrar");
 });
